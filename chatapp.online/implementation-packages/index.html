@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from chatapp.online/implementation-packages/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jun 2022 13:31:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            '../../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1034278700681470');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1034278700681470&amp;ev=PageView&amp;noscript=1"
+        /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206852920-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-206852920-1');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNK2TZD5TC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-XNK2TZD5TC');
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "../../mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(82929562, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/82929562" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf" content="OhXSpAp2LaUSG2pu9fpeDRarkSxTdJAeQ9dvOdaF">
+
+    <title>Implementation - ChatApp</title>
+<meta name="keywords" content=""/>
+<meta name="description" content="Implementation"/>
+
+      <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <!-- <link rel="icon" type="image/png"
+          href="/img/logo/logo16.png"
+          sizes="16x16">
+    <link rel="icon" type="image/png"
+          href="/img/logo/logo32.png"
+          sizes="32x32">
+    <link rel="icon" type="image/png"
+          href="/img/logo/logo128.png"
+          sizes="96x96">
+    <link rel="apple-touch-icon"
+          href="/img/logo/logo128.png"
+          sizes="120x120">
+    <link rel="apple-touch-icon"
+          href="/img/logo/logo300.png"
+          sizes="180x180">
+    <link rel="apple-touch-icon"
+          href="/img/logo/logo300.png"
+
+          sizes="152x152"> -->
+
+    <link rel="stylesheet" href="../css/implementationdd78.css?id=t47XaiFS3RMhT6Di" />
+
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='../../vk.com/js/api/openapi3636.js?169',t.onload=function(){VK.Retargeting.Init("VK-RTRG-1334849-66hBx"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1334849-66hBx" style="position:fixed; left:-999px;" alt=""/></noscript>
+
+</head>
+<body>
+
+      <header>
+            <div class="contacts lg-up">
+            <a href="https://t.me/app24_online_en">
+                <img src="../img/telegram-icon.svg" alt="Telegram link">
+                News
+            </a>
+            <img src="../img/phone-icon.svg" alt="Phone"/>
+            <a href="tel:+74952550620">
+                +7 495 25 506 20
+            </a>
+        </div>
+        <nav class="navbar navbar-expand-lg justify-content-center">
+        <div class="container d-flex align-items-center">
+            <div class="logo">
+                <a href="../index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="90" height="90" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 547 547"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#0088CC}
+    .fil0 {fill:#43D854}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M231 179c0,0 1,-1 2,-1 0,0 0,0 0,0 10,-5 17,-15 17,-27 0,-3 0,-6 -1,-8 -1,-2 -1,-4 -2,-6 -5,-10 -15,-17 -27,-17 -4,0 -8,1 -12,2l0 0c-58,26 -99,84 -99,152 0,91 74,165 165,165 19,0 38,-3 56,-10l0 0c0,0 0,0 0,0 1,0 3,-1 4,-1 7,-4 12,-9 15,-16 2,-4 3,-8 3,-12 0,-12 -7,-22 -17,-27 -4,-2 -9,-3 -14,-3 -3,0 -7,0 -10,1l0 0c-11,5 -24,7 -37,7 -58,0 -104,-47 -104,-104 0,-42 25,-79 61,-95l0 0z"/>
+  <path class="fil1" d="M378 277l0 49 0 95 0 16 0 22c-31,18 -67,28 -104,28 -118,0 -213,-96 -213,-213 0,-117 95,-213 213,-213 113,0 207,90 212,202l0 7 0 15 0 123 0 37 0 60c0,17 14,30 31,30 1,0 2,0 3,0 15,-1 27,-14 27,-30l0 -219 0 -25c0,0 0,0 0,-1 -7,-144 -127,-260 -273,-260 -151,0 -274,123 -274,274 0,79 34,151 89,201 30,28 67,50 108,62 25,7 50,10 77,10 55,0 107,-17 151,-45 0,-1 0,-1 0,-1l0 0c0,0 1,0 1,0 8,-6 13,-14 13,-24 0,0 0,-1 0,-1 0,-1 0,-1 0,-1l0 -3 0 -51 0 -13 0 -131 0 0 0 -3c0,-78 -54,-143 -127,-161l0 0c-2,0 -4,0 -7,0 -4,0 -8,1 -12,2 -11,5 -18,16 -18,28 0,12 7,23 18,28 1,0 3,1 5,1l0 0c46,11 80,53 80,102 0,1 0,2 0,3l0 0 0 0z"/>
+ </g>
+</svg>
+                </a>
+            </div>
+            <div class="contacts-expand lg-down">
+                                    <a href="https://t.me/app24_online_en">
+                        <img src="../img/telegram-icon.svg" alt="Telegram link">
+                    </a>
+                    <div class="popper-button">
+                        <img src="../img/phone-icon.svg" alt="Phone"/>
+                    </div>
+                    <div class="popper" role="tooltip">
+                        <div data-popper-arrow></div>
+                        <a href="tel:+74952550620">+7 495 25 506 20</a>
+                    </div>
+                                <div class="lang-select">
+    <a class="link d-flex align-items-center" href="../ru/implementation-packages/index.html">RU</a>
+</div>            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-menu">
+                <span class=""><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="1.95122" fill="#00080C"/>
+    <rect y="7.02441" width="20" height="1.95122" fill="#00080C"/>
+    <rect y="14.0486" width="20" height="1.95122" fill="#00080C"/>
+</svg>
+</span>
+            </button>
+
+            <div class="flex-grow-1 navbar-collapse collapse" id="header-menu">
+                <div class="links">
+                    <a href="../index.html">Home</a>
+
+                    <div class="products-button drop-down-button">Products</div>
+                    <div class="products-popper popper-container">
+                        <a href="../api/index.html">API messengers</a>
+                        <a href="../whatsapp-business-api/index.html">WhatsApp Business API</a>
+                        <a href="../telegram/index.html">Telegram</a>
+
+                    </div>
+                    <div class="links-lg-down">
+                        <a href="../api/index.html">API messengers</a>
+                        <a href="../whatsapp-business-api/index.html">WhatsApp Business API</a>
+                        <a href="../telegram/index.html">Telegram</a>
+                    </div>
+
+                    <a href="../blog/index.html">Blog</a>
+                    <div class="partners-button drop-down-button">Partners</div>
+                    <div class="partners-popper popper-container">
+
+                        <a href="../partners/index.html">Referral Program</a>
+                        <a href="../partner-rates/index.html">Affiliate Program</a>
+                        <a href="index.html">Implementation Packages</a>
+                        <a href="../partners-cases/index.html">Integrators</a>
+                    </div>
+                    <div class="links-lg-down">
+                        <a href="../partners/index.html">Referral Program</a>
+                        <a href="../partner-rates/index.html">Affiliate Program</a>
+                        <a href="index.html">Implementation Packages</a>
+                        <a href="../partners-cases/index.html">Integrators</a>
+                    </div>
+                    <a href="../price/index.html">Tariffs</a>
+
+                    <div class="help-button drop-down-button">Help</div>
+                    <div class="help-container popper-container">
+                        <a href="../help/index.html">
+                            <h4>Knowledge base</h4>
+                            <p>How does a business work in popular messengers, how to write first, how to be always in touch with a client.</p>
+                        </a>
+                        <a href="../video/index.html">
+                            <h4>Video lessons</h4>
+                            <p>Quickly and conveniently familiarize yourself with the instant communication Chat Center</p>
+                        </a>
+                        <a href="../help/crm/index.html">
+                            <h4>CRM</h4>
+                            <p>Technical support on setting up ChatApp automation rules</p>
+                        </a>
+                    </div>
+
+                    <div class="links-lg-down">
+                        <a href="../help/index.html">Knowledge base</a>
+                        <a href="../video/index.html">Video lessons</a>
+                        <a href="../help/crm/index.html">CRM
+                            - Technical support on setting up ChatApp automation rules</a>
+                    </div>
+                </div>
+
+                <div class="header-left">
+                    <div class="lg-up">
+                        <div class="lang-select">
+    <a class="link d-flex align-items-center" href="../ru/implementation-packages/index.html">RU</a>
+</div>                    </div>
+                    <div class="login-root">
+                        <div class="login-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 0C9.158 0 0 9.158 0 20C0 30.842 9.158 40 20 40C30.842 40 40 30.842 40 20C40 9.158 30.842 0 20 0ZM20 10C23.454 10 26 12.544 26 16C26 19.456 23.454 22 20 22C16.548 22 14 19.456 14 16C14 12.544 16.548 10 20 10ZM9.788 29.544C11.582 26.904 14.574 25.144 18 25.144H22C25.428 25.144 28.418 26.904 30.212 29.544C27.656 32.28 24.03 34 20 34C15.97 34 12.344 32.28 9.788 29.544Z"
+          fill="#43D854"/>
+</svg>
+                        </div>
+                        <a href="https://cabinet.chatapp.online/login?lang=en">Log in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+            <div class="container flex-grow-1">
+	<div class="row gnome mb-10">
+		<div class="col-lg-6 col-12 mb-3 d-flex align-items-center">
+			<img src="../img/Gnoms.svg"  alt="gnom">
+		</div>
+		<div class="col-lg-6 col-12 mt-lg-3 d-flex flex-column">
+			<div class="d-flex flex-column justify-content-center flex-grow-1 title-p">
+				<h1 class="text-lg-start text-center mb-4">Implementation package</h1>
+
+				<p class="text-lg-start text-center mb-4">
+				ChatApp implementation packages are a great way to quickly navigate and evaluate all the features of the service.
+
+				</p>
+				<p class="text-lg-start text-center">Quick implementation, configuration and problem solving with Functional Packages will significantly reduce the time spent on learning and connecting the service products.</p>	
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample0"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">
+					Quick start Implementation of 1 channel to any CRM
+				</p> 
+				<p class="description mb-0">
+					Quick basic connection of ChatApp service
+				</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample0" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>Registration of an account owner</li>
+							<li>Connection of one channel in 2-days test period</li>
+							<li>
+								Employees registration. Provision of access rights to channels.
+							</li>
+							<li>Setup of general tags: not developed, in progress, ready</li>
+							<li>Demonstration in ChatApp WEB</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						1 hour, once when connection each channel
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						Free 
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">Any of:</div>
+								<div class="ml-4">WhatsApp,</div>
+								<div class="ml-4">WABA,</div>
+								<div class="ml-4">Viber,</div>
+								<div class="ml-4">Avito,</div>
+								<div class="ml-4">VK</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample1"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Technical support – consulting</p>
+				<p class="description mb-0">
+					Online solution of issues related with the use of ChatApp service
+				</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample1" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						Free consultations on work in ChatApp, maximum 3 hours per month.
+						Answers to questions, links to instructions on ChatApp setup and
+						operation
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						3 hours per month max.
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						Free
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">Any of:</div>
+								<div class="ml-4">WhatsApp,</div>
+								<div class="ml-4">WABA,</div>
+								<div class="ml-4">Viber,</div>
+								<div class="ml-4">Avito,</div>
+								<div class="ml-4">VK</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample2"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Technical support – administration</p>
+				<p class="description mb-0">
+					Service administration in the form of subscription services.
+				</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample2" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>Online testing of channels by request</li>
+							<li>
+								Troubleshooting
+								<ul type="circle">
+									<li>Lock out or ban in messengers</li>
+									<li>Revised or out of date business processes</li>
+									<li>
+										Changed or out of date forms of documents sent via
+										messengers
+									</li>
+								</ul>
+							</li>
+							<li>
+								Connection of hired (discharged) employees, changes in business
+								processes.
+							</li>
+							<li>
+								Online solution of any issues related with the use of ChatApp
+								service
+							</li>
+							<li>Provision of stable and continuous work of an integration</li>
+							<li>Maximum 10 hours of work included</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						10 hours per month max.
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						10000 &#8381; per month
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">Any of:</div>
+								<div class="ml-4">WhatsApp,</div>
+								<div class="ml-4">WABA,</div>
+								<div class="ml-4">Viber,</div>
+								<div class="ml-4">Avito,</div>
+								<div class="ml-4">VK</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample3"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Implementation of ChatApp in Bitrix24</p>
+				<p class="description mb-0">Turnkey, full setup and training.</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample3" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>
+								Authorization of all messengers and setup of connectors in
+								Bitrix24.
+							</li>
+							<li>
+								Setup of open line
+								<ul type="circle">
+									<li>Setup of open line</li>
+									<li>Work schedule</li>
+									<li>Work evaluation</li>
+									<li>Addition of responsibles to an open line</li>
+								</ul>
+							</li>
+							<li>
+								Setup of dialog tags, transfer of sales funnel stages to dialog
+								tags..
+							</li>
+							<li>Setup of access rights to CRM</li>
+							<li>Setup of access rights to a channel.</li>
+
+							<li>Filling out auto-responses</li>
+							<li>Setting up the 1st business process.</li>
+							<li>
+								Employees training for two hours
+								<ul type="circle">
+									<li>How to write first to the client</li>
+									<li>
+										How to work with chats and to switch dialogs between
+										employees,
+									</li>
+									<li>History of communication with client</li>
+									<li>Setting of tasks from the chat, etc.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						Implementation period 2 weeks
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						25000 &#8381;
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">Any of:</div>
+								<div class="ml-4">WhatsApp,</div>
+								<div class="ml-4">WABA,</div>
+								<div class="ml-4">Viber,</div>
+								<div class="ml-4">Avito,</div>
+								<div class="ml-4">VK</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample4"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Implementation of ChatApp in amoCRM</p>
+				<p class="description mb-0">
+					Turnkey implementation of ChatApp to amoCRM, full setup, training how
+					to use the service
+				</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample4" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>
+								Authorization of all messengers and setup of ChatApp application
+								in amoCRM.
+							</li>
+							<li>
+								Chats setup
+								<ul type="circle">
+									<li>Autoanswers</li>
+									<li>Work schedule</li>
+									<li>Work evaluation</li>
+									<li>Addition of responsibles to online</li>
+								</ul>
+							</li>
+							<li>
+								Setup of dialog tags, transfer of sales funnel stages to dialog
+								tags.
+							</li>
+							<li>Setup of access rights to amoCRM</li>
+							<li>Setup of access rights to a channel</li>
+							<li>
+								Employees training for two hours
+								<ul type="circle">
+									<li>How to write first to the client</li>
+									<li>
+										How to work with chats and to switch dialogs between
+										employees,
+									</li>
+									<li>History of communication with client</li>
+									<li>Setting of tasks from the chat, etc.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						Implementation period 2 weeks
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						25000 &#8381;
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">Any of:</div>
+								<div class="ml-4">WhatsApp,</div>
+								<div class="ml-4">WABA,</div>
+								<div class="ml-4">Viber,</div>
+								<div class="ml-4">Avito,</div>
+								<div class="ml-4">VK</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2>Additional services</h2>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample5"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Phone setup</p>
+				<p class="description mb-0">
+					Ensures stable operation of an integration through a phone
+				</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample5" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>
+								Authorization of a number in messenger, testing the possibility
+								to authorize the number.
+							</li>
+							<li>
+								Connection of a new number, including assistance in selection of
+								a telephony with possibility to authorize messengers.
+							</li>
+							<li>
+								Setup of a background mode with allowance for used device
+								specifics
+							</li>
+							<li>
+								Check and adjustment of the background mode in 2, 4, 8, 24 hours
+								(testing is performed for three business days). Application
+								operation is tested without access of client company employees
+								to it.
+							</li>
+							<li>Training on how to monitor a device status</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						3–5 business days
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						10000 &#8381;
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">WhatsApp through Chat-AP provider</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample7"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Preparation of bulk messaging</p>
+				<p class="description mb-0">Marketing</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample7" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>Preparation of an audience for messaging based on clients</li>
+							<li>
+								Setup of 3 types of bulk messaging
+								<ul type="circle">
+									<li>information</li>
+									<li>service</li>
+									<li>marketing</li>
+								</ul>
+							</li>
+							<li>
+								Setup of messaging schedule, message, intervals between messages
+							</li>
+							<li>
+								Accumulation of audience for messaging by Telegram groups
+								parsing
+							</li>
+							<li>Messaging without lock out or messaging with feedback.</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						days
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						15000 &#8381;
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">Telegram</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample9"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">
+					Bot setup (Wit, DialogFlow, QnA Maker) for automatic answers to
+					standard questions from the knowledge database
+				</p>
+				<p class="description mb-0">Turnkey, full setup and training</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample9" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>
+								Upload of a QA list to the knowledge database of a bot prepared
+								by client.
+							</li>
+							<li>Testing and adjustment (once).</li>
+							<li>Two hours training on bot database update for employees.</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						15 hours max.
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						15000 &#8381;
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">Any of:</div>
+								<div class="ml-4">WhatsApp,</div>
+								<div class="ml-4">WABA,</div>
+								<div class="ml-4">Viber,</div>
+								<div class="ml-4">Avito,</div>
+								<div class="ml-4">VK,</div>
+								<div class="ml-4">Telegram</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample15"
+			aria-expanded="false"
+			aria-controls="#collapseExample9"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Synchronization of phone contacts and CRM.</p>
+				<p class="description mb-0">
+					Required for removal of personal account limits
+				</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample15" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<p class="fw-bolder mb-2 mt-2">Channels</p>
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="ml-4">Telegram</div>
+						</div>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						7 hours max
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						7000 &#8381;
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample44"
+			aria-expanded="false"
+			aria-controls="#collapseExample0"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Preparation and moderation of WABA templates</p>
+				<p class="description mb-0">Setup</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample44" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						<ul>
+							<li>Collection of data from chats with clients</li>
+							<li>Preparation of text templates</li>
+							<li>Preparation of media templates</li>
+							<li>Preparation of templates with buttons</li>
+							<li>Running 1st bulk messaging using a template.</li>
+							<li>Employees training on templates preparation. 2 hours</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						15 hours max
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						15000 &#8381;
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">WABA</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="collapse-question-wrap mb-3">
+		<div
+			data-bs-toggle="collapse"
+			data-bs-target="#collapseExample11"
+			aria-expanded="false"
+			aria-controls="#collapseExample11"
+			class="d-flex collapse-question"
+		>
+			<div class="flex-grow-1 header-block">
+				<p class="mb-2 title">Package: Sales promotion </p>
+				<p class="description mb-0">Marketing</p>
+			</div>
+			<i class="bi bi-x-lg flex-shrink-0 d-none d-md-flex"></i>
+		</div>
+		<div id="collapseExample11" class="collapse">
+			<div class="card card-body mt-4">
+				<div class="row">
+					<div class="col-lg-6 col-12 mb-3">
+						Setup of company's internal processes automation to promote sales and increase conversion
+						<br />
+						Includes:
+						<ul>
+							<li>Sales generator</li>
+							<li>Setup of overtaking robots</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 offset-lg-1 col-6">
+						<p class="fw-bolder">Period:</p>
+						7 days
+					</div>
+					<div class="col-6 col-lg-2">
+						<p class="fw-bolder">Price:</p>
+						15000 &#8381;
+					</div>
+					<div class="col-12 mt-3">
+						<div>
+							<p class="fw-bolder mb-2 mt-2">Channels</p>
+							<div class="d-flex flex-wrap align-items-center">
+								<div class="ml-4">WABA</div>
+								<a href="../partners-cases/index.html" type="button" class="btn  card-collapse-btn">Сhoose an integrator</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mt-4 text-center">
+		<a href="https://drive.google.com/open?id=1MI7yDwMOl8ympoIYlN1mefM6ZGTqE4Yc&amp;authuser=botapp24%40gmail.com&amp;usp=drive_fs" class="text-dark"> <p> Download marriage materials for partners</p></a>
+	</div>
+</div>
+
+<div class="question_form">
+	<div class="container">
+		<div class="text-container">
+			<h2>Any other questions?</h2>
+			<p>Leave a request and our manager will answer you</p>
+		</div>
+				<script data-b24-form="inline/50/l741r5" data-skip-moving="true">
+			(function (w, d, u) {
+				var s = d.createElement('script');
+				s.async = true;
+				s.src = u + '?' + ((Date.now() / 180000) | 0);
+				var h = d.getElementsByTagName('script')[0];
+				h.parentNode.insertBefore(s, h);
+			})(
+				window,
+				document,
+				'../../cdn-ru.bitrix24.ru/b9365617/crm/form/loader_50.js'
+			);
+		</script>
+			</div>
+</div>
+
+      <footer>
+    <div class="container footer-grid">
+        <div class="row align-items-start">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="home-link d-flex">
+                    <a href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="90" height="90" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 547 547"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#0088CC}
+    .fil0 {fill:#43D854}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M231 179c0,0 1,-1 2,-1 0,0 0,0 0,0 10,-5 17,-15 17,-27 0,-3 0,-6 -1,-8 -1,-2 -1,-4 -2,-6 -5,-10 -15,-17 -27,-17 -4,0 -8,1 -12,2l0 0c-58,26 -99,84 -99,152 0,91 74,165 165,165 19,0 38,-3 56,-10l0 0c0,0 0,0 0,0 1,0 3,-1 4,-1 7,-4 12,-9 15,-16 2,-4 3,-8 3,-12 0,-12 -7,-22 -17,-27 -4,-2 -9,-3 -14,-3 -3,0 -7,0 -10,1l0 0c-11,5 -24,7 -37,7 -58,0 -104,-47 -104,-104 0,-42 25,-79 61,-95l0 0z"/>
+  <path class="fil1" d="M378 277l0 49 0 95 0 16 0 22c-31,18 -67,28 -104,28 -118,0 -213,-96 -213,-213 0,-117 95,-213 213,-213 113,0 207,90 212,202l0 7 0 15 0 123 0 37 0 60c0,17 14,30 31,30 1,0 2,0 3,0 15,-1 27,-14 27,-30l0 -219 0 -25c0,0 0,0 0,-1 -7,-144 -127,-260 -273,-260 -151,0 -274,123 -274,274 0,79 34,151 89,201 30,28 67,50 108,62 25,7 50,10 77,10 55,0 107,-17 151,-45 0,-1 0,-1 0,-1l0 0c0,0 1,0 1,0 8,-6 13,-14 13,-24 0,0 0,-1 0,-1 0,-1 0,-1 0,-1l0 -3 0 -51 0 -13 0 -131 0 0 0 -3c0,-78 -54,-143 -127,-161l0 0c-2,0 -4,0 -7,0 -4,0 -8,1 -12,2 -11,5 -18,16 -18,28 0,12 7,23 18,28 1,0 3,1 5,1l0 0c46,11 80,53 80,102 0,1 0,2 0,3l0 0 0 0z"/>
+ </g>
+</svg>
+                    </a>
+                    <div class="lang-select">
+    <a class="link d-flex align-items-center" href="../ru/implementation-packages/index.html">RU</a>
+</div>                </div>
+                <div class="my-3">
+                    <div>
+                        <p class="mb-0 text-support"> Support :  mon-sat 09:00 - 19:00 (UTC +03:00)</p>
+                    </div>
+                    <div>
+                        <a href="mailto:support@chatapp.online">Email: <span itemprop="email">support@chatapp.online</span></a>
+                    </div>                   
+                </div>
+                <div class="social-icons">    
+                    <a href="https://www.facebook.com/ChatApp.online/" class="social-icon social-icon--facebook">
+                        <i class="bi bi-facebook"></i>
+                        <div class="tooltip">Facebook</div>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCc9Ih2s5kJcE_eTaXCBHx0g/featured" class="social-icon social-icon--youtube">
+                        <i class="bi bi-youtube"></i>
+                        <div class="tooltip">YouTube</div>
+                    </a>
+                    <a href="https://t.me/app24_online_en" class="social-icon social-icon--telegram">
+                        <i class="bi bi-telegram"></i>
+                        <div class="tooltip">Telegram</div>
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send?phone=5521960104492&amp;text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83..." class="social-icon social-icon--whatsapp">
+                        <i class="bi bi-whatsapp"></i>
+                        <div class="tooltip">Whatsapp</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 text-right">
+                <h3 class="footer-title mt-4 mb-md-3 mt-md-0">Company </h3>
+                <div>
+                    <div class="text-right">
+                        <a href="../contacts/index.html" class=" my-3">Contacts </a>
+                    </div>
+                    
+                    <div class="text-right">
+                        <a href="../partners/index.html" class=" my-3">Partners </a>
+                    </div>
+                    <div class="text-right">
+                        <a href="https://play.google.com/store/apps/details?id=chatapp.online&amp;utm_source=chatapp.online&amp;pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" class=" my-3">Google Play </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt-lg-0 mt-md-5">
+                <h3 class="footer-title mt-4 mb-md-3 mt-md-0 text-right">Products</h3>
+                <div >   
+                    <div class="text-right">
+                        <a href="../price/index.html" class=" my-3 text-right">Tariffs </a>
+                    </div>                 
+                    <div class="text-right">
+                        <a href="https://chat.chatapp.online/" class=" my-3 text-right">СhatApp Web </a>
+                    </div>
+                    <div class="text-right">
+                        <a href="../whatsapp-business-api/index.html" class=" my-3 text-right">WhatsApp Business API </a>
+                    </div>
+                    <div class="text-right">
+                        <a href="../api/index.html" class=" my-3 text-right">API messengers</a>
+                    </div>
+                    <div class="text-right">
+                        <a href="../telegram/index.html">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2  mt-lg-0 mt-md-5">
+                <h3 class="footer-title mt-4 mb-md-3 mt-md-0 text-right">Resources</h3>
+                <div>
+                    <div class="text-right">
+                        <a href="../blog/index.html" class=" my-3 text-right">Blog </a>
+                    </div>
+                    <div class="text-right">
+                        <a href="../help/index.html" class=" my-3 text-right">Knowledge base </a>
+                    </div>
+                    <div class="text-right">
+                        <a href="../video/index.html" class=" my-3 text-right">Video lessons </a>
+                    </div>
+                    <div class="text-right">
+                        <a href="../partners-cases/index.html" class=" my-3 text-right">Integrators </a>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+        <div class="row flex-nowrap mt-3">
+            <div class="col-12 d-flex justify-content-between flex-wrap">
+                <div class="footer-items-brand align-items-center">
+                    2022@ChatApp
+                </div>
+                <div class="d-flex flex-wrap align-items-center">
+                    <div class="d-flex w-md-100"> 
+                        <a href="https://cabinet.chatapp.online/license_agreement?lang=en" class="footer-items-text">License agreement</a>
+                    </div>
+                    <div class="d-flex w-md-100 align-items-center"> 
+                        <a href="https://cabinet.chatapp.online/privacy_policy?lang=en" class="footer-items-text">Privacy Policy</a>
+                    </div>
+                    <div class="d-flex w-md-100 align-items-center"> 
+                        <a href="https://cabinet.chatapp.online/my-recurrent?lang=en" class="footer-items-text">Disable subscription</a>
+                    </div>
+                    <div class="d-flex w-md-100 align-items-center"> 
+                        <a href="https://cabinet.chatapp.online/terms-of-return?lang=en" class="footer-items-text">Terms of return</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+
+      <script src="../js/implementation.js" defer></script>
+      <script src="../js/form_bitrix.js" defer></script>
+
+
+<!-- <script>
+    (function (w, d, u) {
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = u + '?' + (Date.now() / 60000 | 0);
+        var h = d.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s, h);
+    })(window, document, 'https://cdn-ru.bitrix24.ru/b9365617/crm/site_button/loader_4_u2kp1a.js');
+</script> -->
+
+
+<script src="../../s3.wasabisys.com/cabinet.chatapp.online/widgetsFiles/304/2022/06/01/053ca54f-4c7b-48bd-a348-bb24f433b2c5.js" defer ></script>
+<script src="../../s3.wasabisys.com/cabinet.chatapp.online/external/widget/v1/widget.js" defer ></script>
+
+
+
+
+<!-- Mirrored from chatapp.online/implementation-packages/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jun 2022 13:31:08 GMT -->
+</html>
