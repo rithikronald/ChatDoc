@@ -1,0 +1,5 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+20:07:41	13011/13011	---MCZ	200	added ('OK')	text/html	date:Thu,%2016%20Jun%202022%2014:37:43%20GMT	https://cabinet.chatapp.online/register?lang=en	E:/ChatDoc/demo/cabinet.chatapp.online/register9ed2.html	(from )
+20:07:42	26/26	---M--	200	added ('OK')	text/plain	etag:%2261dbdca3-1a%22	https://cabinet.chatapp.online/robots.txt		(from )
+20:07:42	850/850	---MC-	200	added ('OK')	text/javascript	date:Thu,%2016%20Jun%202022%2014:37:44%20GMT	https://www.google.com/recaptcha/api.js	E:/ChatDoc/demo/www.google.com/recaptcha/api.js	(from https://cabinet.chatapp.online/register?lang=en)
+20:07:44	208333/208333	---M-Z	200	added ('OK')	application/javascript	etag:%2262aacae2-13701%22	https://mc.yandex.ru/metrika/tag.js	E:/ChatDoc/demo/mc.yandex.ru/metrika/tag.js	(from https://cabinet.chatapp.online/register?lang=en)
